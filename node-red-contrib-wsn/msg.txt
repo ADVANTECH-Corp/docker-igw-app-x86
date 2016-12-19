@@ -1,0 +1,7 @@
+[WSN-Node-V2] WNS-Node for WSN RESTful & C API
+Date            : 2016/12/19
+Bug #           : N/A
+Description     : add checkWSNAPIVersion, connect to advigw-api-gw name
+Files           : restfulApi.js wsn_gw.js
+Reviewer        :
+Commit by       : Eric.Liang
