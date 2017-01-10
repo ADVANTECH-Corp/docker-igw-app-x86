@@ -69,7 +69,6 @@
   "name": "node-red-contrib-wsn",
   "node-red": {
     "nodes": {
-      "wsn-test": "wsn_node/wsn-get-raw.js",
       "wsn-gw": "wsn_node/wsn_gw.js",
       "wsn-senhub": "wsn_node/wsn_senhub.js"
     }
