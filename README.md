@@ -4,9 +4,9 @@ A simple node that can configure HDD SMART code to do HDD failure prediction
 ## Usage example
 **[hdd-pmq]**
 
-![Flow_wsn-gw](./image/hddpmq_20170123_2.png)
+![Flow_wsn-gw](./node-red-contrib-hddpmq/image/hddpmq_20170123_2.png)
 
-![Edit_wsn-gw](./image/hddpmq_20170123_1.png)
+![Edit_wsn-gw](./node-red-contrib-hddpmq/image/hddpmq_20170123_1.png)
 
 - **Name :** *(Optional)* Place for entering the name of this node
 - **Mqtt Broker :** MQTT broker's IP address or alias address name.
