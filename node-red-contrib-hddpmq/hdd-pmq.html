@@ -1,0 +1,96 @@
+<script type="text/javascript">
+    RED.nodes.registerType('hdd-pmq',{
+        category: 'ADVANTECH',
+        color: '#C0DEED',
+        defaults: {
+            name: {value:""},
+            mqttBrokerIP: {value:"127.0.0.1"},
+            deviceID: {value:"12345678"},
+            smart5: {value:""},
+            smart9: {value:""},
+            smart187: {value:""},
+            smart192: {value:""},
+            smart197: {value:""},
+            smart198: {value:""},
+            smart194: {value:""},
+            smart193: {value:""},
+            smart199: {value:""},
+            smart191: {value:""},
+            smart173: {value:""},
+        },
+        inputs:1,
+        outputs:1,
+        icon: "dht.png",
+        label: function() {
+            return this.name||"hdd-pmq";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="hdd-pmq">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-mqttBrokerIP"><i class="icon-tag"></i>Mqtt Broker</label>
+        <input type="text" id="node-input-mqttBrokerIP" placeholder="Mqtt Broker">
+    </div>
+    <div class="form-row">
+        <label for="node-input-deviceID"><i class="icon-tag"></i>Device ID</label>
+        <input type="text" id="node-input-deviceID" placeholder="Device ID">
+    </div>
+    <div class="form-row">
+        <label for="node-input-smart5"><i class="icon-tag"></i>SMART 5</label>
+        <input type="text" id="node-input-smart5" placeholder="hex number">
+    </div>
+    <div class="form-row">
+        <label for="node-input-smart9"><i class="icon-tag"></i>SMART 9</label>
+        <input type="text" id="node-input-smart9" placeholder="hex number">
+    </div>
+    <div class="form-row">
+        <label for="node-input-smart187"><i class="icon-tag"></i>SMART 187</label>
+        <input type="text" id="node-input-smart187" placeholder="hex number">
+    </div>
+    <div class="form-row">
+        <label for="node-input-smart192"><i class="icon-tag"></i>SMART 192</label>
+        <input type="text" id="node-input-smart192" placeholder="hex number">
+    </div>
+    <div class="form-row">
+        <label for="node-input-smart197"><i class="icon-tag"></i>SMART 197</label>
+        <input type="text" id="node-input-smart197" placeholder="hex number">
+    </div>
+    <div class="form-row">
+        <label for="node-input-smart198"><i class="icon-tag"></i>SMART 198</label>
+        <input type="text" id="node-input-smart198" placeholder="hex number">
+    </div>
+    <div class="form-row">
+        <label for="node-input-smart194"><i class="icon-tag"></i>SMART 194</label>
+        <input type="text" id="node-input-smart194" placeholder="hex number">
+    </div>
+    <div class="form-row">
+        <label for="node-input-smart193"><i class="icon-tag"></i>SMART 193</label>
+        <input type="text" id="node-input-smart193" placeholder="hex number">
+    </div>
+    <div class="form-row">
+        <label for="node-input-smart199"><i class="icon-tag"></i>SMART 199</label>
+        <input type="text" id="node-input-smart199" placeholder="hex number">
+    </div>
+    <div class="form-row">
+        <label for="node-input-smart191"><i class="icon-tag"></i>SMART 191</label>
+        <input type="text" id="node-input-smart191" placeholder="hex number">
+    </div>
+    <div class="form-row">
+        <label for="node-input-smart173"><i class="icon-tag"></i>SMART 173</label>
+        <input type="text" id="node-input-smart173" placeholder="hex number">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="hdd-pmq">
+    <p>A simple node that can configure HDD SMART code to do HDD failure prediction</p>
+</script>
+</script>
+
+<script type="text/x-red" data-help-name="hdd-pmq">
+    <p>A simple node that can configure HDD SMART code to do HDD failure prediction</p>
+</script>
