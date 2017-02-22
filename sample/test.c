@@ -243,8 +243,7 @@ int main() {
 	WiseSnail_RegisterInterface("000E4CAB1236", "Ethernet", -1, interface1, 1);
 	//WiseSnail_RegisterInterface("000123456788", "Ethernet", -1, interface1, 1);
 	
-    if(WiseSnail_Open(SERVER_URL, 1883, "", "", NULL, 0) == 0) {
-	//if(WiseAgent_OpenBySSL(SERVER_URL, 1883, "admin", "05155853", "", "", "", "") == 0) {
+      if(WiseSnail_Connect(SERVER_URL, 1883, "", "", NULL, 0) == 0) {
     	//
 		// no succesful connection to broker
 		//
@@ -262,7 +261,7 @@ int main() {
 	int count = 0;
     int second = 0;
     for(;;) {
-#if 0
+
         if(second == 0) {
 			/*HDC1050_GetSensorData(&Temperature, &Humidity);
 			data[0].value = Temperature;
@@ -284,18 +283,15 @@ int main() {
 			
 			
             printf("\r\n****** \033[33mSend update.\033[0m ******\r\n");
-            WiseSnail_Write("000E4C000000", data, 4);
-			WiseSnail_Write("000E4C000001", data, 4);
-			//WiseSnail_Write("000123456000", data, 4);
-			//WiseSnail_Write("000123456001", data, 4);
+            WiseSnail_Write("000E4C000010", data, 4);
+			WiseSnail_Write("000E4C000011", data, 4);
 			count++;
         }
-#endif
+
 		WiseSnail_Cmd_Handler(sleepOneSecond);
 		
-
 		second = (second+1)%5;
-		//if(count == 3) return 0;
+
     }
 	return 0; 
 }

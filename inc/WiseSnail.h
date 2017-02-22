@@ -29,7 +29,7 @@ typedef enum WiseSnail_DataType
 	WISE_FLOAT,
 	WISE_STRING,
 	WISE_BOOL,
-} WiseSnail_DataType;
+}WiseSnail_DataType;
 
 typedef struct WiseSnail_InfoSpec WiseSnail_InfoSpec;
 
