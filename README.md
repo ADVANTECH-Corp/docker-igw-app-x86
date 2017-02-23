@@ -10,4 +10,14 @@ Branch:
 # wsn-simulator
 This is a WSN Simulator application
 
+# bt-simulator
+This is a bt simulator application
 
+# dust-link
+This is a linear dust link application with wisesnail
+
+# node-red-contrib-hddpmq
+This is a hddpmq node-red node
+
+# node-red-contrib-wsn
+This is wsn node-red node
