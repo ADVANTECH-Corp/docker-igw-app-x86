@@ -1,23 +1,18 @@
-docker-igw-app
-Applicatoin for x86_64 Linux OS Platform.
-You can change branch to checkout different application source or binary code
+Test tools for EIS x86_64 Linux OS Platform.
 
-Branch:
+# How To
+./log.sh     => To log process in system and docker containers in period 120 sec.
+./log.sh 30  => pass parameter to change logging period to 30 sec
 
-# wisesnail-lib
- WiseSnail libraies and sample code for building the "Connectivity Docker base/development image"
 
-# wsn-simulator
-This is a WSN Simulator application
+# log.sh
+Period to log memory, cpu, pid of each monitored process in system. ( Default period is 120 sec )
 
-# bt-simulator
-This is a bt simulator application
+You can modify the "services" in log.sh for monitored process.
 
-# dust-link
-This is a linear dust link application with wisesnail
 
-# node-red-contrib-hddpmq
-This is a hddpmq node-red node
+# dockerlog.sh
+Period to log container name, id, memory, and cpu usage in Docker Container. ( Default period is 120 sec )
+ 
+You can modify the "CONTAINERS" in dockerlog.sh for monitored Docker Containers.
 
-# node-red-contrib-wsn
-This is wsn node-red node
