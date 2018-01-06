@@ -1,0 +1,39 @@
+===============================================================================
+Linux SUSIIoT Library
+===============================================================================
+
+-------------------------------------------------------------------------------
+How to install/uninstall SUSIIoT Library & run demo AP
+-------------------------------------------------------------------------------
+install
+        1) Extract the gzip file.
+           user$ tar zxf SUSIIoT_Release.gz
+        2) Execute install.sh and Press 1 to install SUSIIoT.
+           user# sudo ./release/library/install.sh 
+        3) Execute demo AP.
+           user# sudo ./release/sampleCode/demo/output/SusiiotDemo
+		   
+uninstall
+        1) Execute install.sh and Press 2 to uninstall SUSIIoT.
+           user# sudo ./release/library/install.sh 
+
+-------------------------------------------------------------------------------
+Compile Sample Sources AP
+-------------------------------------------------------------------------------
+        1) main.cpp is the sample source code.
+        2) Make sure libSusiIoT.so and libjansson.so in your library/ folder.
+        3) Refer to "Makefile", then use "make" to compile it.
+		
+-------------------------------------------------------------------------------
+Folder explanation
+------------------------------------------------------------------------------- 
+        1) release/library/
+           SUSIIoT essential libraries and module libraries
+        2) reease/sampleCode/demo
+           SUSIIoT demo AP
+        3) release/sampleCode/IoTJsonLibrary
+           SUSI_IOT_API for SUSI_IOT Json format.
+        4) release/sampleCode/SampleLib
+           For integrating sensor data from external sensors 
+        
+           
