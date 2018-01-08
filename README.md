@@ -1,23 +1,19 @@
-docker-igw-app
-Applicatoin for x86_64 Linux OS Platform.
-You can change branch to checkout different application source or binary code
+Edge Sense services applications
+RMM3.3Agent + HDDPMQ, SUSIControl, Modbus Services
 
-Branch:
 
-# wisesnail-lib
- WiseSnail libraies and sample code for building the "Connectivity Docker base/development image"
+# WISE-Agent ( RMM3.3)
+ Service Agent for loading Service plug-in
+ -./logs
+ -./agent_config.xml
 
-# wsn-simulator
-This is a WSN Simulator application
+# HDDPMQ  
+ HDD PMQ Service ( ./service/HDDPMQ.so )
 
-# bt-simulator
-This is a bt simulator application
+# SUSIControl_Handler
+ SUSI Control Service ( ./service/SUSIControl_Handler.so )
 
-# dust-link
-This is a linear dust link application with wisesnail
+# Modbus_Handler 
+ Modbus Service ( ./service/Modbus_Handler.so )
+ -./Modbus_Handler.ini
 
-# node-red-contrib-hddpmq
-This is a hddpmq node-red node
-
-# node-red-contrib-wsn
-This is wsn node-red node
