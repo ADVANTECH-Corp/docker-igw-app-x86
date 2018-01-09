@@ -1,16 +1,18 @@
 #!/bin/bash
 
-if [ ! -d "/home/adv/SUSIControl" ]; then
-        mkdir /home/adv/SUSIControl
-        mkdir /home/adv/SUSIControl/config
-        cp /usr/local/AgentService/agent_config.xml /home/adv/SUSIControl/config/.
+ServiceName=EService-SUSIControl
+
+if [ ! -d "/home/adv/$ServiceName" ]; then
+        mkdir /home/adv/$ServiceName
+        mkdir /home/adv/$ServiceName/config
+        cp /usr/local/$ServiceName/agent_config.xml /home/adv/$ServiceName/config/.
 fi
 
 
-if [ ! -d "/home/adv/SUSIControl/config/agent_config.xml" ]; then
-        cp /home/adv/SUSIControl/config/agent_config.xml /usr/local/AgentService/.
+if [ ! -d "/home/adv/$ServiceName/config/agent_config.xml" ]; then
+        cp /home/adv/$ServiceName/config/agent_config.xml /usr/local/$ServiceName/.
 fi
 
-cd /usr/local/AgentService
+cd /usr/local/$ServiceName
 
 ./cagent
