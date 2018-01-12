@@ -18,6 +18,10 @@ if [ ! -d "/home/adv/$ServiceName/config/module_config.xml" ]; then
         cp /home/adv/$ServiceName/config/agent_config.xml /usr/local/$ServiceName/module/.
 fi
 
+if [ ! -d "/run/saagent.pid" ]; then
+        rm /run/saagent.pid
+fi
+
 
 cd /usr/local/$ServiceName
 
