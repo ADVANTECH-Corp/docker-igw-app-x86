@@ -18,6 +18,10 @@ if [ ! -d "/home/adv/$ServiceName/config/Modbus_Handler.ini" ]; then
         cp /home/adv/$ServiceName/config/Modbus_Handler.ini /usr/local/$ServiceName/.
 fi
 
+if [ ! -d "/run/saagent.pid" ]; then
+        rm /run/saagent.pid
+fi
+
 cd /usr/local/$ServiceName
 
 ./cagent
