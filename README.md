@@ -1,19 +1,14 @@
-Edge Sense services applications
-RMM3.3Agent + HDDPMQ, SUSIControl, Modbus Services
+WAPI libraries for Ubuntu16.04
 
+Install path: /usr/lib/
 
-# WISE-Agent ( RMM3.3)
- Service Agent for loading Service plug-in
- -./logs
- -./agent_config.xml
+# libAdvWebClientAPI
+ Advantech Web API SDK supports HTTP Client and websocket - by libcurl, libwebsocket
 
-# HDDPMQ  
- HDD PMQ Service ( ./service/HDDPMQ.so )
+# libcurl 
+ Open Source for HTTP Client libraries
 
-# SUSIControl_Handler
- SUSI Control Service ( ./service/SUSIControl_Handler.so )
+# libwebsocket
+ Open Source for Websocket libraries
 
-# Modbus_Handler 
- Modbus Service ( ./service/Modbus_Handler.so )
- -./Modbus_Handler.ini
 
