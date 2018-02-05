@@ -2,8 +2,8 @@
 echo "Uninstall AgentService." 
 
 PATH_SYSTEMD="/lib/systemd/system"
-PATH_SYSTEMD_ETC="/etc/systemd/system/"
-PATH_SYSTEMD_AUTO="/etc/systemd/system/multi-user.target.wants/"
+PATH_SYSTEMD_ETC="/etc/systemd/system"
+PATH_SYSTEMD_AUTO="/etc/systemd/system/multi-user.target.wants"
 PATH_UPSTART="/etc/init"
 PATH_SYSV="/etc/init.d"
 

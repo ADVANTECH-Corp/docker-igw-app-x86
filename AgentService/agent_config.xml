@@ -19,13 +19,13 @@
     <PSKCiphers/>
   <AutoStart>True</AutoStart></BaseSettings>
   <Profiles>
-    <DeviceName>9fbbad69ef09</DeviceName>
-    <DevID>00000001-0000-0000-0000-0242AC110007</DevID>
+    <DeviceName></DeviceName>
+    <DevID></DevID>
 	<SWProduct>RMM</SWProduct>
-    <SN>0242AC110007</SN>
+    <SN></SN>
     <DevType>IPC</DevType>
-    <WorkDir>/home/adv/EI-Agent/RMM-EI-Agent_/Release/AgentService/</WorkDir>
-    <SWVersion>1.0.9.125772663</SWVersion>
+    <WorkDir></WorkDir>
+    <SWVersion>1.0.10.233383094</SWVersion>
     <UserName>anonymous</UserName>
     <UserPassword/>
     <Product/>

@@ -126,10 +126,10 @@ check_linux_version ()
 	$SES10)host_distro="LSES10";;       	# SLES 10
 	$SED11)host_distro="LSES11";;       	# SLED 11
 	$SES11)host_distro="LSES11";;       	# SLES 11
-	$Opensuse10)host_distro="LSES10";;	# OpenSuse 10
-	$Opensuse11)host_distro="LSES11";;	# OpenSuse 11
-	$Opensuse12)host_distro="LSES12";;	# OpenSuse 12
-	$LRH72)host_distro="LRH72";;		# Redhat 7.2
+	$Opensuse10)host_distro="LSES10";;	    # OpenSuse 10
+	$Opensuse11)host_distro="LSES11";;	    # OpenSuse 11
+	$Opensuse12)host_distro="LSES12";;	    # OpenSuse 12
+	$LRH72)host_distro="LRH72";;		    # Redhat 7.2
 	*)host_distro="non"
 	esac
         Linux_RH=`uname -a | grep xen 2>/dev/null`
@@ -144,6 +144,12 @@ check_linux_version ()
 }
 update_config()
 {
+	sed -i "s|\(<CredentialURL>\)[^<>]*\(</CredentialURL>\)|\1$credentialurl\2|" $filename
+	sed -i "s|<CredentialURL/>|<CredentialURL>$credentialurl</CredentialURL>|g" $filename
+
+	sed -i "s|\(<IoTKey>\)[^<>]*\(</IoTKey>\)|\1$iotkey\2|" $filename
+	sed -i "s|<IoTKey/>|<IoTKey>$iotkey</IoTKey>|g" $filename
+
 	sed -i "s|\(<ServerIP>\)[^<>]*\(</ServerIP>\)|\1$serveraddress\2|" $filename
 	sed -i "s|<ServerIP/>|<ServerIP>$serveraddress</ServerIP>|g" $filename
 	
@@ -248,6 +254,9 @@ filename=/usr/local/AgentService/agent_config.xml
 encrypttool=AgentEncrypt
 config_susiaccess ()
 {
+	credentialurl=$credential
+	iotkey=$iot_key
+	serveraddress=$address
 	serverport=$port
 	username=$usrname
 	userpassword=$usrpass
@@ -277,24 +286,34 @@ config_susiaccess ()
         echo "****************************************************************************************************"
 	read -p "Do you want to configure RMM Agent now? [y/n](default: y)" susiaccess_config_ans
 	if [ "$susiaccess_config_ans" == "y" ] ||[ "$susiaccess_config_ans" == "Y"  ] ||[ "$susiaccess_config_ans" == ""  ]; then
-				read -p "Input Server IPAddress(default:$address): " serveraddress
-				if [ "$serveraddress" == "" ]; then
-					serveraddress=$address
-				fi	
+
+				read -p "Input Credential API URL(default:$credential): " credentialurl
+				if [ "$credentialurl" == "" ]; then
+					credentialurl=$credential
+				fi
+				read -p "Input IoT Key(default:$iot_key): " iotkey
+				if [ "$iotkey" == "" ]; then
+					iotkey=$iot_key
+				fi
+
+#				read -p "Input Server IPAddress(default:$address): " serveraddress
+#				if [ "$serveraddress" == "" ]; then
+#					serveraddress=$address
+#				fi	
 								
-				while true
-		                do
-					read -p "Input Server Port(default:$port): " serverport
-					
-					if [ "$serverport" == "" ]; then
-						serverport=$port
-						break
-					elif [[ $serverport =~ ^[0-9]+$ ]] && [ $serverport -le 65535 ] && [ $serverport -ge 1 ]; then
-						break
-					else
-						echo "Input Server Port Number is error!"
-					fi
-				done	
+#				while true
+#		                do
+#					read -p "Input Server Port(default:$port): " serverport
+#					
+#					if [ "$serverport" == "" ]; then
+#						serverport=$port
+#						break
+#					elif [[ $serverport =~ ^[0-9]+$ ]] && [ $serverport -le 65535 ] && [ $serverport -ge 1 ]; then
+#						break
+#					else
+#						echo "Input Server Port Number is error!"
+#					fi
+#				done	
 				
 				if [ "$usrname" == "" ]; then
 					usrname="anonymous"
@@ -594,6 +613,8 @@ config_susiaccess ()
 		fi
 #	fi
 }
+credential=""
+iot_key=""
 address=""
 port=1883
 name=$HOSTNAME
@@ -615,6 +636,9 @@ pskcipher=""
 reconn="enable"
 load_config()
 {
+	credential=$(sed -n 's:.*<CredentialURL>\(.*\)</CredentialURL>.*:\1:p' $filename)
+	iot_key=$(sed -n 's:.*<IoTKey>\(.*\)</IoTKey>.*:\1:p' $filename)
+
 	address=$(sed -n 's:.*<ServerIP>\(.*\)</ServerIP>.*:\1:p' $filename)
 	port=$(sed -n 's:.*<ServerPort>\(.*\)</ServerPort>.*:\1:p' $filename)
 	name=$(sed -n 's:.*<DeviceName>\(.*\)</DeviceName>.*:\1:p' $filename)

@@ -3,8 +3,8 @@
   <BaseSettings>
     <RunMode>Standalone</RunMode>
     <AutoReconnect>True</AutoReconnect>
-	<CredentialURL>https://api-dccs.wise-paas.com/v1/credential/</CredentialURL>
-	<IoTKey></IoTKey>
+    <CredentialURL>https://api-dccs.wise-paas.com/v1/serviceCredentials/</CredentialURL>
+    <IoTKey></IoTKey>
     <ServerIP>wise-msghub.eastasia.cloudapp.azure.com</ServerIP>
     <ServerPort>1883</ServerPort>
     <ConnAuth>301d23d7-7a61-476f-9f36-c2e8144f99c5:44a81096-c63c-4a12-ac25-c323e57205c9;bhi9thtgjhfardk1ig29lrhvc1</ConnAuth>
@@ -25,7 +25,7 @@
     <SN></SN>
     <DevType>IPC</DevType>
     <WorkDir></WorkDir>
-    <SWVersion>1.0.9.77f2377</SWVersion>
+    <SWVersion>1.0.10.de924b6</SWVersion>
     <UserName></UserName>
     <UserPassword></UserPassword>
     <Product></Product>
