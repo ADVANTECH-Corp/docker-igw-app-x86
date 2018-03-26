@@ -19,4 +19,14 @@ fi
 
 cd /usr/local/$ServiceName
 
-./cagent
+if [ ! -d "./$ServiceName" ]; then
+       cp ./cagent ./$ServiceName
+fi
+
+if [ $DEBUG_MODE == 1 ]; then
+  while true; do
+        sleep 1
+  done
+else
+   ./$ServiceName
+fi

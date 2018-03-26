@@ -17,8 +17,8 @@
     <PSKCiphers></PSKCiphers>
   </BaseSettings>
   <Profiles>
-    <DeviceName>SUSIControlHandler</DeviceName>
-    <DevID>SUSIControlHandler</DevID>
+    <DeviceName>SUSIControl</DeviceName>
+    <DevID>SUSIControl</DevID>
     <SN></SN>
     <DevType>Service</DevType>
     <WorkDir></WorkDir>
