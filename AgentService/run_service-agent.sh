@@ -25,4 +25,15 @@ fi
 
 cd /usr/local/$ServiceName
 
-./cagent
+cp /usr/local/$ServiceName/agent_config.xml /home/adv/$ServiceName/config/.
+
+
+if [ $DEBUG_MODE == 1 ]; then
+  while true; do
+        sleep 1
+  done
+else
+   ./cagent
+fi
+
+
