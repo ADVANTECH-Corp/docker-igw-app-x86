@@ -33,7 +33,8 @@ if [ $DEBUG_MODE == 1 ]; then
         sleep 1
   done
 else
-   ./cagent
+   ./after_run.sh &
+   ./cagent 
 fi
 
 
