@@ -1,0 +1,17 @@
+[Unit]
+Description=Modbus Service
+After=network.target systemd-sysctl.service systemd-modules-load.service
+
+[Service]
+WorkingDirectory=/usr/local/EdgeSense/Modbus_Handler
+ExecStart=/usr/local/EdgeSense/Modbus_Handler/Agent_Modbus_Handler
+Restart=no
+#RestartSec=30s
+#WatchdogSec=10s
+#Watchdog=1
+ExecStopPost=/bin/rm -f /var/run/Agent_Modbus_Handler.pid
+Type=simple
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target

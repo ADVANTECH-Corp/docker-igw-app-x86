@@ -1,0 +1,17 @@
+******************************************************************
+*                                                                *
+*                        ABOUT EDGESENSE                         *
+*                                                                *
+******************************************************************
+1. Intro
+This installer/script provided by Advantech will install necessary environment and agent of the cloud you choose to use, in order to transmit your device and sensor data to cloud platform. Once installation done, you have your device ready.
+2. Get connected
+Second step, visit below URL for applying account and get started:
+WISE-PaaS/EnSaaS               https://portal-rmm.wise-paas.com/ (a device management app developed on WISE-PaaS/EnSaaS)
+Microsoft Azure                http://wise-paas.advantech.com/en-us/marketplace/detailinfo/0
+AWS Connect & Collect package  http://wise-paas.advantech.com/en-us/marketplace/detailinfo/43
+3. Online helpful info
+Access to more technical info here:
+http://ess-wiki.advantech.com.tw/view/EdgeSense
+Advantech Co., Ltd.
+Feb. 2018
