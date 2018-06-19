@@ -94,7 +94,8 @@ function CloudSection(){
 	echo "---------------------------------------------------------------------------"
 	echo "Please choose the cloud that you'd like to connect to:"
 	echo "(1) WISE-PaaS/EdgeSense (device management service developed on WISE-PaaS/EnSaaS )"
-	echo "(2) Amazon Web Services (AWS)"
+	echo "(2) Microsoft Azure"
+	echo "(3) Amazon Web Services (AWS)"
 	read -p "" choice
 	
 	case $choice in 
@@ -105,6 +106,12 @@ function CloudSection(){
 	    InstallPlugins
 		;;
 	  [2])
+            echo "You should download the Azure Node-RED flow from Online help"
+            NewLine 1
+            read -p "Press ENTER to continue"
+	    InstallPlugins
+		;;        
+	  [3])
 	    InstallAWS
 	    InstallPlugins
 		;;

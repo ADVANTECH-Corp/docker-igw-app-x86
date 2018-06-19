@@ -9,9 +9,7 @@ Environment="NODE_RED_OPTIONS=-v"
 #Full Path to Node.js
 ExecStart=/usr/bin/nodejs $NODE_OPTIONS red.js $NODE_RED_OPTIONS
 
-#ExecStart=/usr/bin/nodejs /usr/lib/node_modules/node-red/red.js
 Type=simple
-#ExecStart=/usr/bin/nodejs /usr/lib/node_modules/node-red/red.js
 
 WorkingDirectory=/usr/lib/node_modules/node-red/
 # User/Group that launches node-RED (it's advised to create a new user for Node-RED)

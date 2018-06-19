@@ -16,11 +16,14 @@ mkdir -p ${EPACK_PATH}/archive/rootfs/usr/local/EdgeSense/$PROJECT_NAME || exit 
 mkdir -p ${EPACK_PATH}/archive/rootfs/etc/systemd/system || exit 1
 rm -rf  ${EPACK_PATH}/archive/rootfs/usr/local/EdgeSense/$PROJECT_NAME/* || exit 1
 
-mkdir -p ${EPACK_PATH}/archive/rootfs/usr/lib/node_modules/node-red/ || exit 1
+#mkdir -p ${EPACK_PATH}/archive/rootfs/usr/lib/node_modules/node-red/ || exit 1
 cp -f ePack_custom.bash ${EPACK_PATH}/archive/rootfs/usr/local/EdgeSense/${PROJECT_NAME}/package.info || exit 1
-cp -rf ../${PROJECT_NAME}/node_modules ${EPACK_PATH}/archive/rootfs/usr/lib/node_modules/node-red/ || exit 1
+
 #service
 cp -f ${PROJECT_NAME}.service ${EPACK_PATH}/archive/rootfs/etc/systemd/system || exit 1
+cp -f ${PROJECT_NAME}1.service ${EPACK_PATH}/archive/ || exit 1
+cp -f ${PROJECT_NAME}2.service ${EPACK_PATH}/archive/ || exit 1
+cp -rf ../${PROJECT_NAME}/* ${EPACK_PATH}/archive/rootfs/usr/local/EdgeSense/$PROJECT_NAME/ || exit 1
 cp -f ../${PROJECT_NAME}/README.md ${EPACK_PATH}/archive/rootfs/usr/local/EdgeSense/$PROJECT_NAME/ || exit 1
 cp -f ../${PROJECT_NAME}/uninstall.bash ${EPACK_PATH}/archive/rootfs/usr/local/EdgeSense/$PROJECT_NAME/ || exit 1
 
